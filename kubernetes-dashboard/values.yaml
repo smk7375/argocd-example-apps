@@ -383,6 +383,15 @@ metrics-server:
 kong:
   enabled: true
   ## Configuration reference: https://docs.konghq.com/gateway/3.6.x/reference/configuration
+  containerSecurityContext:
+  readOnlyRootFilesystem: true
+  allowPrivilegeEscalation: false
+  runAsNonRoot: true
+  seccompProfile:
+    type: RuntimeDefault
+  capabilities:
+    drop:
+      - ALL
   env:
     dns_order: LAST,A,CNAME,AAAA,SRV
     plugins: 'off'
