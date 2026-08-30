@@ -43,7 +43,6 @@ app:
     containerSecurityContext:
       allowPrivilegeEscalation: false
       readOnlyRootFilesystem: true
-      runAsUser: 1001
       runAsGroup: 2001
       capabilities:
         drop: ["ALL"]
