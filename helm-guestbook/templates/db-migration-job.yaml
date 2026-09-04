@@ -16,4 +16,4 @@ spec:
           command:
             - "sh"
             - "-c"
-            - "echo running db migration... && sleep 10"
+            - "echo 'Running db migration...'; sleep 10; echo 'Done!'"
